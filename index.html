@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PlayZilla Mobile</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="errorMsg">Format not supported by this device</div>
+
+    <div id="dropZone">
+        <h1 style="font-size: 3rem; margin-bottom: 0;">PlayZilla</h1>
+        <p style="color: #666; margin-bottom: 30px;">Mobile Cinema</p>
+        
+        <label for="fileInput" class="btn-main">
+            <span class="material-icons">folder_open</span> Select Movie
+        </label>
+        <input type="file" id="fileInput"> 
+    </div>
+
+    <div class="player-wrapper" id="playerWrapper">
+        
+        <video id="video" playsinline preload="metadata"></video>
+
+        <div class="touch-layer">
+            <div class="zone zone-side" id="touchLeft">
+                <div class="feedback-icon" id="iconLeft"><span class="material-icons">replay_10</span></div>
+            </div>
+            <div class="zone zone-center" id="touchCenter">
+                <div class="feedback-icon" id="iconCenter"><span class="material-icons">play_arrow</span></div>
+            </div>
+            <div class="zone zone-side" id="touchRight">
+                <div class="feedback-icon" id="iconRight"><span class="material-icons">forward_10</span></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="progress-container" id="progressBar">
+                <div class="progress-bg">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <div style="display:flex; align-items:center;">
+                    <button class="icon-btn" id="btnPlay"><span class="material-icons">play_arrow</span></button>
+                    <span class="time-text"><span id="curTime">0:00</span> / <span id="durTime">0:00</span></span>
+                </div>
+                
+                <div style="display:flex; align-items:center;">
+                    <label for="subInput" class="icon-btn" style="color:white;">
+                        <span class="material-icons">subtitles</span>
+                    </label>
+                    <input type="file" id="subInput" accept=".vtt,.srt">
+                    
+                    <button class="icon-btn" id="btnFull"><span class="material-icons">fullscreen</span></button>
+                    <button class="icon-btn" id="btnNew"><span class="material-icons">eject</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

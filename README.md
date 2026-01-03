@@ -38,9 +38,6 @@ The project is hosted using Vercel for fast and reliable performance.
 📸 Preview
 Minimal cinematic interface inspired by modern mobile streaming platforms.
 
-## 📄 License
+📄 License
 This project is open-source and free to use for learning and personal projects.
 
----
-
-⭐ If you like this project, feel free to star the repository!
